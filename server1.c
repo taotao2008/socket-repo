@@ -8,6 +8,7 @@
 #define MYPORT 4000
 /* 能够同时接受多少没有accept 的连接 */
 #define BACKLOG 10
+//添加注释
 int main()
 {
 	int server_sockfd,client_sockfd;
