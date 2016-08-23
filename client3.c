@@ -5,7 +5,7 @@
 #include <netinet/in.h>
 #include <sys/socket.h>
 /* 服务器程序监听的端口号 */
-#define PORT 4000
+#define PORT 9700
 /* 我们一次所能够接收的最大字节数 */
 #define MAXDATASIZE 100
 int main(int argc, char *argv[])
@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 	char ch = 'A';
 	sockfd = socket(AF_INET, SOCK_STREAM, 0);
 	address.sin_family = AF_INET;
-	address.sin_addr.s_addr = inet_addr("127.0.0.1");
+	address.sin_addr.s_addr = inet_addr("172.16.24.167");
 	address.sin_port = htons(9734);
 	len = sizeof(address);
 	result = connect(sockfd, (struct sockaddr *) &address, len);
